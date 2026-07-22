@@ -1,0 +1,1393 @@
+2026-07-13 14:37:44 | INFO | config.llm_config:<module>:18 | Using OpenRouter Model: meta-llama/llama-3.3-70b-instruct
+2026-07-13 14:37:47 | INFO | implementation.precision_medicine_impl:__init__:34 | Initializing PrecisionMedicineImplementation
+2026-07-13 14:37:47 | INFO | services.precision_medicine_service:__init__:25 | PrecisionMedicineService initialized successfully
+2026-07-13 14:38:38 | INFO | config.llm_config:<module>:18 | Using OpenRouter Model: meta-llama/llama-3.3-70b-instruct
+2026-07-13 14:38:42 | INFO | implementation.precision_medicine_impl:__init__:34 | Initializing PrecisionMedicineImplementation
+2026-07-13 14:38:42 | INFO | services.precision_medicine_service:__init__:25 | PrecisionMedicineService initialized successfully
+2026-07-13 14:38:42 | INFO | main:lifespan:23 | ================================================================================
+2026-07-13 14:38:42 | INFO | main:lifespan:26 | Starting Multi-Agent Precision Medicine Platform
+2026-07-13 14:38:42 | INFO | main:lifespan:29 | AutoGen Version: 0.7.5
+2026-07-13 14:38:42 | INFO | main:lifespan:32 | ================================================================================
+2026-07-13 14:40:02 | INFO | main:request_logging_middleware:99 | [189962ae-6f94-48e3-a7e9-a68bb8467c89] Incoming Request | Method=OPTIONS | Path=/api/v1/precision-medicine
+2026-07-13 14:40:02 | SUCCESS | main:request_logging_middleware:114 | [189962ae-6f94-48e3-a7e9-a68bb8467c89] Completed | Status=200 | Execution=0.00s
+2026-07-13 14:40:02 | INFO | main:request_logging_middleware:99 | [937908e2-16eb-468f-b6ec-9a628fa7a50f] Incoming Request | Method=POST | Path=/api/v1/precision-medicine
+2026-07-13 14:40:02 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:42 | [REQUEST RECEIVED] Patient ID: PAT-2026-1001
+2026-07-13 14:40:02 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:46 | Starting Precision Medicine Analysis for Patient: John Smith
+2026-07-13 14:40:02 | INFO | services.precision_medicine_service:generate_precision_plan:36 | Starting Precision Medicine Service for Patient ID: PAT-2026-1001
+2026-07-13 14:40:04 | INFO | implementation.precision_medicine_impl:generate_precision_plan:49 | Precision Medicine Analysis Started for Patient ID: PAT-2026-1001
+2026-07-13 14:40:04 | INFO | agents.genomics_agent:create_genomics_agent:17 | Initializing GenomicsAgent
+2026-07-13 14:40:04 | SUCCESS | agents.genomics_agent:create_genomics_agent:93 | GenomicsAgent initialized successfully
+2026-07-13 14:40:04 | INFO | agents.diagnosis_agent:create_diagnosis_agent:21 | Initializing DiagnosisAgent
+2026-07-13 14:40:04 | SUCCESS | agents.diagnosis_agent:create_diagnosis_agent:108 | DiagnosisAgent initialized successfully
+2026-07-13 14:40:04 | INFO | agents.treatment_agent:create_treatment_agent:21 | Initializing TreatmentAgent
+2026-07-13 14:40:04 | SUCCESS | agents.treatment_agent:create_treatment_agent:126 | TreatmentAgent initialized successfully
+2026-07-13 14:40:04 | INFO | agents.research_agent:create_research_agent:20 | Initializing ResearchAgent
+2026-07-13 14:40:04 | SUCCESS | agents.research_agent:create_research_agent:113 | ResearchAgent initialized successfully
+2026-07-13 14:40:04 | INFO | implementation.precision_medicine_impl:generate_precision_plan:87 | All Precision Medicine Agents Initialized
+2026-07-13 14:40:04 | INFO | implementation.precision_medicine_impl:generate_precision_plan:105 | RoundRobinGroupChat Team Created
+2026-07-13 14:40:04 | INFO | implementation.precision_medicine_impl:generate_precision_plan:172 | Patient Analysis Task Constructed
+2026-07-13 14:46:24 | INFO | main:request_logging_middleware:99 | [a89cba0e-0717-4050-98a0-7e1510fa4b90] Incoming Request | Method=POST | Path=/api/v1/precision-medicine
+2026-07-13 14:46:24 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:42 | [REQUEST RECEIVED] Patient ID: PAT-2026-1001
+2026-07-13 14:46:24 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:46 | Starting Precision Medicine Analysis for Patient: John Smith
+2026-07-13 14:46:24 | INFO | services.precision_medicine_service:generate_precision_plan:36 | Starting Precision Medicine Service for Patient ID: PAT-2026-1001
+2026-07-13 14:46:24 | ERROR | services.precision_medicine_service:generate_precision_plan:108 | Precision Medicine Service failed for Patient ID: PAT-2026-1001 after 0.00 seconds. Error: Run with UUID 33286b28e9464f33a386a4dbc8a47eb4 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 356
+               │     └ 3
+               └ <function _main at 0x000001B8F75B8860>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 356
+           │    └ <function BaseProcess._bootstrap at 0x000001B8F72989A0>
+           └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x000001B8F7293EC0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x000001B8F7581190>, 'target': <bound method Server.run of <uvicorn.server.Server...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+    │    └ <function subprocess_started at 0x000001B8F9A571A0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=364, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x000001B8F9A9DE50>>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\server.py", line 74, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x000001B8F98BA520>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x000001B8F7581190>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x000001B8F9A9DE50>
+           │           │    │             └ [<socket.socket fd=364, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x000001B8F9A56160>
+           │           └ <uvicorn.server.Server object at 0x000001B8F9A9DE50>
+           └ <function asyncio_run at 0x000001B8F9897740>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000001B8F9A3A2F0>
+           │      └ <function Runner.run at 0x000001B8F92F4F40>
+           └ <asyncio.runners.Runner object at 0x000001B8F98C2B90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Manag...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001B8F92F2AC0>
+           │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001B8F98C2B90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001B8F92F2A20>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001B8F92F4860>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001B8F923E200>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\anyio\_core\_tasks.py", line 278, in _run_coro
+    retval = await self._coro
+                   │    └ <member '_coro' of 'TaskHandle' objects>
+                   └ <TaskHandle pending name='starlette.middleware.base.BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.coro' coro=<corou...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+          │    │   │      │                      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001B89BE222A0>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+          └ <starlette.middleware.base.BaseHTTPMiddleware object at 0x000001B89BBE90D0>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'content-length': '2540', 'sec-ch-ua-platform': '"Windows"', '...
+          │    │               │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001B89BE222A0>
+          │    │               │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001B89BBCB2E0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010...
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001B89BBE80D0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010...
+          │                            │    │    │     │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001B89C86B5D0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001B89BBE80D0>
+          └ <function wrap_app_handling_exceptions at 0x000001B8FAACDF80>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x000001B89BBDA290>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │    │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method APIRouter.app of <fastapi.routing.APIRouter object at 0x000001B89BBDA290>>
+          └ <fastapi.routing.APIRouter object at 0x000001B89BBDA290>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │     │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function _IncludedRouter.handle at 0x000001B8FAB1C900>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+          │    │               │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │    │               │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │               │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    │               └ <function APIRouter.handle at 0x000001B8FAB1E8E0>
+          │    └ <fastapi.routing.APIRouter object at 0x000001B8FAC30050>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+          │               │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │               │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │               │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │               └ <function _IncludedRouter._handle_selected at 0x000001B8FAB1C9A0>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+          │              │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │              │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │              │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │              └ <function APIRoute.handle at 0x000001B8FAB02A20>
+          └ APIRoute(path='/precision-medicine', name='generate_precision_medicine_plan', methods=['POST'])
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app at 0x000001B89C7EFB00>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │                            │    │        │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001B89C86AC50>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001B89C815440>
+          └ <function wrap_app_handling_exceptions at 0x000001B8FAACDF80>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815300>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001B89C815440>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001B89C86AC50>
+                     └ <function get_request_handler.<locals>.app at 0x000001B89C7EF9C0>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001B8FAB01C60>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': PrecisionMedicineRequest(patient_id='PAT-2026-1001', patient_name='John Smith', date_of_birth=datetime.date(1968,...
+                 │         └ <function generate_precision_medicine_plan at 0x000001B8FAC18540>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\routers\precision_medicine_router.py", line 51, in generate_precision_medicine_plan
+    response = await service.generate_precision_plan(
+                     │       └ <function PrecisionMedicineService.generate_precision_plan at 0x000001B89B6C6DE0>
+                     └ <services.precision_medicine_service.PrecisionMedicineService object at 0x000001B89B6DB5D0>
+
+> File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\services\precision_medicine_service.py", line 45, in generate_precision_plan
+    with mlflow.start_run(
+         │      └ <function start_run at 0x000001B898E05E40>
+         └ <module 'mlflow' from 'E:\\Freelancing_Projects\\Autogen\\Expert_Level\\Clinical_Trial_Management\\.venv\\Lib\\site-packages\...
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\mlflow\tracking\fluent.py", line 556, in start_run
+    raise Exception(
+
+Exception: Run with UUID 33286b28e9464f33a386a4dbc8a47eb4 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2026-07-13 14:46:24 | ERROR | routers.precision_medicine_router:generate_precision_medicine_plan:73 | Precision Medicine Analysis Failed | Patient ID: PAT-2026-1001 | Execution Time: 0.48 seconds | Error: Run with UUID 33286b28e9464f33a386a4dbc8a47eb4 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 356
+               │     └ 3
+               └ <function _main at 0x000001B8F75B8860>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 356
+           │    └ <function BaseProcess._bootstrap at 0x000001B8F72989A0>
+           └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x000001B8F7293EC0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x000001B8F7581190>, 'target': <bound method Server.run of <uvicorn.server.Server...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+    │    └ <function subprocess_started at 0x000001B8F9A571A0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=364, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x000001B8F9A9DE50>>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\server.py", line 74, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x000001B8F98BA520>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x000001B8F7581190>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x000001B8F9A9DE50>
+           │           │    │             └ [<socket.socket fd=364, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x000001B8F9A56160>
+           │           └ <uvicorn.server.Server object at 0x000001B8F9A9DE50>
+           └ <function asyncio_run at 0x000001B8F9897740>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000001B8F9A3A2F0>
+           │      └ <function Runner.run at 0x000001B8F92F4F40>
+           └ <asyncio.runners.Runner object at 0x000001B8F98C2B90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Manag...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001B8F92F2AC0>
+           │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001B8F98C2B90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001B8F92F2A20>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001B8F92F4860>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001B8F923E200>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\anyio\_core\_tasks.py", line 278, in _run_coro
+    retval = await self._coro
+                   │    └ <member '_coro' of 'TaskHandle' objects>
+                   └ <TaskHandle pending name='starlette.middleware.base.BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.coro' coro=<corou...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+          │    │   │      │                      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001B89BE222A0>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+          └ <starlette.middleware.base.BaseHTTPMiddleware object at 0x000001B89BBE90D0>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'content-length': '2540', 'sec-ch-ua-platform': '"Windows"', '...
+          │    │               │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001B89BE222A0>
+          │    │               │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001B89BBCB2E0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010...
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001B89BBE80D0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010...
+          │                            │    │    │     │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001B89C86B5D0>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001B89BBE80D0>
+          └ <function wrap_app_handling_exceptions at 0x000001B8FAACDF80>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x000001B89BBDA290>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │    │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method APIRouter.app of <fastapi.routing.APIRouter object at 0x000001B89BBDA290>>
+          └ <fastapi.routing.APIRouter object at 0x000001B89BBDA290>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │     │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function _IncludedRouter.handle at 0x000001B8FAB1C900>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+          │    │               │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │    │               │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │    │               │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    │               └ <function APIRouter.handle at 0x000001B8FAB1E8E0>
+          │    └ <fastapi.routing.APIRouter object at 0x000001B8FAC30050>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+          │               │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │               │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │               │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │               └ <function _IncludedRouter._handle_selected at 0x000001B8FAB1C9A0>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+          │              │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │              │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │              │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │              └ <function APIRoute.handle at 0x000001B8FAB02A20>
+          └ APIRoute(path='/precision-medicine', name='generate_precision_medicine_plan', methods=['POST'])
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app at 0x000001B89C7EFB00>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89BE21940>
+          │                            │    │        │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001B89C86AC50>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001B89C815440>
+          └ <function wrap_app_handling_exceptions at 0x000001B8FAACDF80>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815300>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B89BE22020>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001B89C815440>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001B89C86AC50>
+                     └ <function get_request_handler.<locals>.app at 0x000001B89C7EF9C0>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001B8FAB01C60>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': PrecisionMedicineRequest(patient_id='PAT-2026-1001', patient_name='John Smith', date_of_birth=datetime.date(1968,...
+                 │         └ <function generate_precision_medicine_plan at 0x000001B8FAC18540>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+> File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\routers\precision_medicine_router.py", line 51, in generate_precision_medicine_plan
+    response = await service.generate_precision_plan(
+                     │       └ <function PrecisionMedicineService.generate_precision_plan at 0x000001B89B6C6DE0>
+                     └ <services.precision_medicine_service.PrecisionMedicineService object at 0x000001B89B6DB5D0>
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\services\precision_medicine_service.py", line 115, in generate_precision_plan
+    raise ex
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\services\precision_medicine_service.py", line 45, in generate_precision_plan
+    with mlflow.start_run(
+         │      └ <function start_run at 0x000001B898E05E40>
+         └ <module 'mlflow' from 'E:\\Freelancing_Projects\\Autogen\\Expert_Level\\Clinical_Trial_Management\\.venv\\Lib\\site-packages\...
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\mlflow\tracking\fluent.py", line 556, in start_run
+    raise Exception(
+
+Exception: Run with UUID 33286b28e9464f33a386a4dbc8a47eb4 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2026-07-13 14:46:24 | SUCCESS | main:request_logging_middleware:114 | [a89cba0e-0717-4050-98a0-7e1510fa4b90] Completed | Status=500 | Execution=0.54s
+2026-07-13 14:47:32 | INFO | main:request_logging_middleware:99 | [a652fd2b-8739-4f2d-978e-0cc3d7ea6f8e] Incoming Request | Method=POST | Path=/api/v1/precision-medicine
+2026-07-13 14:47:32 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:42 | [REQUEST RECEIVED] Patient ID: PAT-2026-1001
+2026-07-13 14:47:32 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:46 | Starting Precision Medicine Analysis for Patient: John Smith
+2026-07-13 14:47:32 | INFO | services.precision_medicine_service:generate_precision_plan:36 | Starting Precision Medicine Service for Patient ID: PAT-2026-1001
+2026-07-13 14:47:32 | ERROR | services.precision_medicine_service:generate_precision_plan:108 | Precision Medicine Service failed for Patient ID: PAT-2026-1001 after 0.00 seconds. Error: Run with UUID 33286b28e9464f33a386a4dbc8a47eb4 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 356
+               │     └ 3
+               └ <function _main at 0x000001B8F75B8860>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 356
+           │    └ <function BaseProcess._bootstrap at 0x000001B8F72989A0>
+           └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x000001B8F7293EC0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x000001B8F7581190>, 'target': <bound method Server.run of <uvicorn.server.Server...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+    │    └ <function subprocess_started at 0x000001B8F9A571A0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=364, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x000001B8F9A9DE50>>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\server.py", line 74, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x000001B8F98BA520>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x000001B8F7581190>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x000001B8F9A9DE50>
+           │           │    │             └ [<socket.socket fd=364, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x000001B8F9A56160>
+           │           └ <uvicorn.server.Server object at 0x000001B8F9A9DE50>
+           └ <function asyncio_run at 0x000001B8F9897740>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000001B8F9A3A2F0>
+           │      └ <function Runner.run at 0x000001B8F92F4F40>
+           └ <asyncio.runners.Runner object at 0x000001B8F98C2B90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Manag...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001B8F92F2AC0>
+           │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001B8F98C2B90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001B8F92F2A20>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001B8F92F4860>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001B8F923E200>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\anyio\_core\_tasks.py", line 278, in _run_coro
+    retval = await self._coro
+                   │    └ <member '_coro' of 'TaskHandle' objects>
+                   └ <TaskHandle pending name='starlette.middleware.base.BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.coro' coro=<corou...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+          │    │   │      │                      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001B8FC7DD800>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+          └ <starlette.middleware.base.BaseHTTPMiddleware object at 0x000001B89BBE90D0>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'content-length': '2540', 'sec-ch-ua-platform': '"Windows"', '...
+          │    │               │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001B8FC7DD800>
+          │    │               │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001B89BBCB2E0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010...
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001B89BBE80D0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010...
+          │                            │    │    │     │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001B89C874490>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001B89BBE80D0>
+          └ <function wrap_app_handling_exceptions at 0x000001B8FAACDF80>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x000001B89BBDA290>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │    │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method APIRouter.app of <fastapi.routing.APIRouter object at 0x000001B89BBDA290>>
+          └ <fastapi.routing.APIRouter object at 0x000001B89BBDA290>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │     │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function _IncludedRouter.handle at 0x000001B8FAB1C900>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+          │    │               │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │    │               │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │               │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    │               └ <function APIRouter.handle at 0x000001B8FAB1E8E0>
+          │    └ <fastapi.routing.APIRouter object at 0x000001B8FAC30050>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+          │               │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │               │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │               │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │               └ <function _IncludedRouter._handle_selected at 0x000001B8FAB1C9A0>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+          │              │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │              │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │              │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │              └ <function APIRoute.handle at 0x000001B8FAB02A20>
+          └ APIRoute(path='/precision-medicine', name='generate_precision_medicine_plan', methods=['POST'])
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app at 0x000001B89C815300>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │                            │    │        │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001B89C9CA3D0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001B89C8154E0>
+          └ <function wrap_app_handling_exceptions at 0x000001B8FAACDF80>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C9CC4A0>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001B89C8154E0>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001B89C9CA3D0>
+                     └ <function get_request_handler.<locals>.app at 0x000001B89C815440>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001B8FAB01C60>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': PrecisionMedicineRequest(patient_id='PAT-2026-1001', patient_name='John Smith', date_of_birth=datetime.date(1968,...
+                 │         └ <function generate_precision_medicine_plan at 0x000001B8FAC18540>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\routers\precision_medicine_router.py", line 51, in generate_precision_medicine_plan
+    response = await service.generate_precision_plan(
+                     │       └ <function PrecisionMedicineService.generate_precision_plan at 0x000001B89B6C6DE0>
+                     └ <services.precision_medicine_service.PrecisionMedicineService object at 0x000001B89B6DB5D0>
+
+> File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\services\precision_medicine_service.py", line 45, in generate_precision_plan
+    with mlflow.start_run(
+         │      └ <function start_run at 0x000001B898E05E40>
+         └ <module 'mlflow' from 'E:\\Freelancing_Projects\\Autogen\\Expert_Level\\Clinical_Trial_Management\\.venv\\Lib\\site-packages\...
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\mlflow\tracking\fluent.py", line 556, in start_run
+    raise Exception(
+
+Exception: Run with UUID 33286b28e9464f33a386a4dbc8a47eb4 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2026-07-13 14:47:32 | ERROR | routers.precision_medicine_router:generate_precision_medicine_plan:73 | Precision Medicine Analysis Failed | Patient ID: PAT-2026-1001 | Execution Time: 0.05 seconds | Error: Run with UUID 33286b28e9464f33a386a4dbc8a47eb4 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 356
+               │     └ 3
+               └ <function _main at 0x000001B8F75B8860>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 356
+           │    └ <function BaseProcess._bootstrap at 0x000001B8F72989A0>
+           └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x000001B8F7293EC0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x000001B8F7581190>, 'target': <bound method Server.run of <uvicorn.server.Server...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+    │    └ <function subprocess_started at 0x000001B8F9A571A0>
+    └ <SpawnProcess name='SpawnProcess-1' parent=17040 started>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=364, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x000001B8F9A9DE50>>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\server.py", line 74, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x000001B8F98BA520>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x000001B8F7581190>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x000001B8F9A9DE50>
+           │           │    │             └ [<socket.socket fd=364, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x000001B8F9A56160>
+           │           └ <uvicorn.server.Server object at 0x000001B8F9A9DE50>
+           └ <function asyncio_run at 0x000001B8F9897740>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000001B8F9A3A2F0>
+           │      └ <function Runner.run at 0x000001B8F92F4F40>
+           └ <asyncio.runners.Runner object at 0x000001B8F98C2B90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Manag...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001B8F92F2AC0>
+           │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001B8F98C2B90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001B8F92F2A20>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001B8F92F4860>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001B8F923E200>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\anyio\_core\_tasks.py", line 278, in _run_coro
+    retval = await self._coro
+                   │    └ <member '_coro' of 'TaskHandle' objects>
+                   └ <TaskHandle pending name='starlette.middleware.base.BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.coro' coro=<corou...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+          │    │   │      │                      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001B8FC7DD800>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+          └ <starlette.middleware.base.BaseHTTPMiddleware object at 0x000001B89BBE90D0>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\cors.py", line 96, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'content-length': '2540', 'sec-ch-ua-platform': '"Windows"', '...
+          │    │               │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001B8FC7DD800>
+          │    │               │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001B89BBCB2E0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\cors.py", line 154, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010...
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001B89BBE80D0>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001B89BBE9010...
+          │                            │    │    │     │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001B89C874490>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001B89BBE80D0>
+          └ <function wrap_app_handling_exceptions at 0x000001B8FAACDF80>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x000001B89BBDA290>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001B89BBE8110>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\routing.py", line 660, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │    │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method APIRouter.app of <fastapi.routing.APIRouter object at 0x000001B89BBDA290>>
+          └ <fastapi.routing.APIRouter object at 0x000001B89BBDA290>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 2683, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │     │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function _IncludedRouter.handle at 0x000001B8FAB1C900>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1753, in handle
+    await self.original_router.handle(scope, receive, send)
+          │    │               │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │    │               │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │    │               │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    │               └ <function APIRouter.handle at 0x000001B8FAB1E8E0>
+          │    └ <fastapi.routing.APIRouter object at 0x000001B8FAC30050>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 2738, in handle
+    await included_router._handle_selected(scope, receive, send)
+          │               │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │               │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │               │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │               └ <function _IncludedRouter._handle_selected at 0x000001B8FAB1C9A0>
+          └ _IncludedRouter(original_router=<fastapi.routing.APIRouter object at 0x000001B8FAC30050>, include_context=_RouterIncludeConte...
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1773, in _handle_selected
+    await original_route.handle(scope, receive, send)
+          │              │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │              │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │              │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │              └ <function APIRoute.handle at 0x000001B8FAB02A20>
+          └ APIRoute(path='/precision-medicine', name='generate_precision_medicine_plan', methods=['POST'])
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 1264, in handle
+    await app(scope, receive, send)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app at 0x000001B89C815300>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 150, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C815580>
+          │                            │    │        │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001B89C9CA3D0>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001B89C8154E0>
+          └ <function wrap_app_handling_exceptions at 0x000001B8FAACDF80>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001B89C9CC4A0>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001B8FC7DE660>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001B89C8154E0>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 136, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001B89C9CA3D0>
+                     └ <function get_request_handler.<locals>.app at 0x000001B89C815440>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 690, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001B8FAB01C60>
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\fastapi\routing.py", line 344, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': PrecisionMedicineRequest(patient_id='PAT-2026-1001', patient_name='John Smith', date_of_birth=datetime.date(1968,...
+                 │         └ <function generate_precision_medicine_plan at 0x000001B8FAC18540>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+> File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\routers\precision_medicine_router.py", line 51, in generate_precision_medicine_plan
+    response = await service.generate_precision_plan(
+                     │       └ <function PrecisionMedicineService.generate_precision_plan at 0x000001B89B6C6DE0>
+                     └ <services.precision_medicine_service.PrecisionMedicineService object at 0x000001B89B6DB5D0>
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\services\precision_medicine_service.py", line 115, in generate_precision_plan
+    raise ex
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\services\precision_medicine_service.py", line 45, in generate_precision_plan
+    with mlflow.start_run(
+         │      └ <function start_run at 0x000001B898E05E40>
+         └ <module 'mlflow' from 'E:\\Freelancing_Projects\\Autogen\\Expert_Level\\Clinical_Trial_Management\\.venv\\Lib\\site-packages\...
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\Clinical_Trial_Management\.venv\Lib\site-packages\mlflow\tracking\fluent.py", line 556, in start_run
+    raise Exception(
+
+Exception: Run with UUID 33286b28e9464f33a386a4dbc8a47eb4 is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2026-07-13 14:47:32 | SUCCESS | main:request_logging_middleware:114 | [a652fd2b-8739-4f2d-978e-0cc3d7ea6f8e] Completed | Status=500 | Execution=0.11s
+2026-07-13 14:47:44 | INFO | implementation.precision_medicine_impl:generate_precision_plan:184 | Agent Collaboration Completed
+2026-07-13 14:47:44 | INFO | implementation.precision_medicine_impl:generate_precision_plan:200 | Collected 9 agent messages
+2026-07-13 14:47:44 | SUCCESS | implementation.precision_medicine_impl:generate_precision_plan:214 | Precision Medicine Analysis Completed in 459.42 seconds
+2026-07-13 14:47:46 | SUCCESS | services.precision_medicine_service:generate_precision_plan:94 | Precision Medicine Service completed successfully for Patient ID: PAT-2026-1001 in 461.95 seconds
+2026-07-13 14:47:46 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:59 | Precision Medicine Analysis Completed | Patient ID: PAT-2026-1001 | Execution Time: 464.11 seconds
+2026-07-13 14:47:46 | SUCCESS | main:request_logging_middleware:114 | [937908e2-16eb-468f-b6ec-9a628fa7a50f] Completed | Status=200 | Execution=464.12s
+2026-07-13 14:48:32 | INFO | main:request_logging_middleware:99 | [9385b5e9-d5e6-4d7e-a57f-3a397cb2ef41] Incoming Request | Method=POST | Path=/api/v1/precision-medicine
+2026-07-13 14:48:32 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:42 | [REQUEST RECEIVED] Patient ID: PAT-2026-1001
+2026-07-13 14:48:32 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:46 | Starting Precision Medicine Analysis for Patient: John Smith
+2026-07-13 14:48:32 | INFO | services.precision_medicine_service:generate_precision_plan:36 | Starting Precision Medicine Service for Patient ID: PAT-2026-1001
+2026-07-13 14:48:34 | INFO | implementation.precision_medicine_impl:generate_precision_plan:49 | Precision Medicine Analysis Started for Patient ID: PAT-2026-1001
+2026-07-13 14:48:34 | INFO | agents.genomics_agent:create_genomics_agent:17 | Initializing GenomicsAgent
+2026-07-13 14:48:34 | SUCCESS | agents.genomics_agent:create_genomics_agent:93 | GenomicsAgent initialized successfully
+2026-07-13 14:48:34 | INFO | agents.diagnosis_agent:create_diagnosis_agent:21 | Initializing DiagnosisAgent
+2026-07-13 14:48:34 | SUCCESS | agents.diagnosis_agent:create_diagnosis_agent:108 | DiagnosisAgent initialized successfully
+2026-07-13 14:48:34 | INFO | agents.treatment_agent:create_treatment_agent:21 | Initializing TreatmentAgent
+2026-07-13 14:48:34 | SUCCESS | agents.treatment_agent:create_treatment_agent:126 | TreatmentAgent initialized successfully
+2026-07-13 14:48:34 | INFO | agents.research_agent:create_research_agent:20 | Initializing ResearchAgent
+2026-07-13 14:48:34 | SUCCESS | agents.research_agent:create_research_agent:113 | ResearchAgent initialized successfully
+2026-07-13 14:48:34 | INFO | implementation.precision_medicine_impl:generate_precision_plan:87 | All Precision Medicine Agents Initialized
+2026-07-13 14:48:34 | INFO | implementation.precision_medicine_impl:generate_precision_plan:105 | RoundRobinGroupChat Team Created
+2026-07-13 14:48:34 | INFO | implementation.precision_medicine_impl:generate_precision_plan:172 | Patient Analysis Task Constructed
+2026-07-13 14:51:00 | INFO | implementation.precision_medicine_impl:generate_precision_plan:184 | Agent Collaboration Completed
+2026-07-13 14:51:00 | INFO | implementation.precision_medicine_impl:generate_precision_plan:200 | Collected 9 agent messages
+2026-07-13 14:51:00 | SUCCESS | implementation.precision_medicine_impl:generate_precision_plan:214 | Precision Medicine Analysis Completed in 145.87 seconds
+2026-07-13 14:51:02 | SUCCESS | services.precision_medicine_service:generate_precision_plan:94 | Precision Medicine Service completed successfully for Patient ID: PAT-2026-1001 in 148.05 seconds
+2026-07-13 14:51:02 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:59 | Precision Medicine Analysis Completed | Patient ID: PAT-2026-1001 | Execution Time: 150.44 seconds
+2026-07-13 14:51:02 | SUCCESS | main:request_logging_middleware:114 | [9385b5e9-d5e6-4d7e-a57f-3a397cb2ef41] Completed | Status=200 | Execution=150.44s
+2026-07-13 15:01:05 | INFO | main:request_logging_middleware:99 | [8decab10-d345-40bf-acf2-fc092710fded] Incoming Request | Method=OPTIONS | Path=/api/v1/precision-medicine
+2026-07-13 15:01:05 | SUCCESS | main:request_logging_middleware:114 | [8decab10-d345-40bf-acf2-fc092710fded] Completed | Status=200 | Execution=0.00s
+2026-07-13 15:01:05 | INFO | main:request_logging_middleware:99 | [01226373-c47e-40bb-87be-9feaca3f165d] Incoming Request | Method=POST | Path=/api/v1/precision-medicine
+2026-07-13 15:01:05 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:42 | [REQUEST RECEIVED] Patient ID: PAT-2026-1001
+2026-07-13 15:01:05 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:46 | Starting Precision Medicine Analysis for Patient: John Smith
+2026-07-13 15:01:05 | INFO | services.precision_medicine_service:generate_precision_plan:36 | Starting Precision Medicine Service for Patient ID: PAT-2026-1001
+2026-07-13 15:01:07 | INFO | implementation.precision_medicine_impl:generate_precision_plan:49 | Precision Medicine Analysis Started for Patient ID: PAT-2026-1001
+2026-07-13 15:01:07 | INFO | agents.genomics_agent:create_genomics_agent:17 | Initializing GenomicsAgent
+2026-07-13 15:01:07 | SUCCESS | agents.genomics_agent:create_genomics_agent:93 | GenomicsAgent initialized successfully
+2026-07-13 15:01:07 | INFO | agents.diagnosis_agent:create_diagnosis_agent:21 | Initializing DiagnosisAgent
+2026-07-13 15:01:07 | SUCCESS | agents.diagnosis_agent:create_diagnosis_agent:108 | DiagnosisAgent initialized successfully
+2026-07-13 15:01:07 | INFO | agents.treatment_agent:create_treatment_agent:21 | Initializing TreatmentAgent
+2026-07-13 15:01:07 | SUCCESS | agents.treatment_agent:create_treatment_agent:126 | TreatmentAgent initialized successfully
+2026-07-13 15:01:07 | INFO | agents.research_agent:create_research_agent:20 | Initializing ResearchAgent
+2026-07-13 15:01:07 | SUCCESS | agents.research_agent:create_research_agent:113 | ResearchAgent initialized successfully
+2026-07-13 15:01:07 | INFO | implementation.precision_medicine_impl:generate_precision_plan:87 | All Precision Medicine Agents Initialized
+2026-07-13 15:01:07 | INFO | implementation.precision_medicine_impl:generate_precision_plan:105 | RoundRobinGroupChat Team Created
+2026-07-13 15:01:07 | INFO | implementation.precision_medicine_impl:generate_precision_plan:172 | Patient Analysis Task Constructed
+2026-07-13 15:05:48 | INFO | implementation.precision_medicine_impl:generate_precision_plan:184 | Agent Collaboration Completed
+2026-07-13 15:05:48 | INFO | implementation.precision_medicine_impl:generate_precision_plan:200 | Collected 9 agent messages
+2026-07-13 15:05:48 | SUCCESS | implementation.precision_medicine_impl:generate_precision_plan:214 | Precision Medicine Analysis Completed in 280.94 seconds
+2026-07-13 15:05:50 | SUCCESS | services.precision_medicine_service:generate_precision_plan:94 | Precision Medicine Service completed successfully for Patient ID: PAT-2026-1001 in 283.12 seconds
+2026-07-13 15:05:50 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:59 | Precision Medicine Analysis Completed | Patient ID: PAT-2026-1001 | Execution Time: 285.48 seconds
+2026-07-13 15:05:50 | SUCCESS | main:request_logging_middleware:114 | [01226373-c47e-40bb-87be-9feaca3f165d] Completed | Status=200 | Execution=285.48s
+2026-07-13 15:16:33 | INFO | main:request_logging_middleware:99 | [e6f39643-efd6-4e9d-abb6-c079e0e1265b] Incoming Request | Method=GET | Path=/precision-medicine/health
+2026-07-13 15:16:33 | SUCCESS | main:request_logging_middleware:114 | [e6f39643-efd6-4e9d-abb6-c079e0e1265b] Completed | Status=404 | Execution=0.00s
+2026-07-13 15:16:44 | INFO | main:request_logging_middleware:99 | [a72c4611-5f3c-4279-839a-8ff00c42af4b] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-13 15:16:44 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-13 15:16:44 | SUCCESS | main:request_logging_middleware:114 | [a72c4611-5f3c-4279-839a-8ff00c42af4b] Completed | Status=200 | Execution=0.00s
+2026-07-13 15:17:08 | INFO | main:request_logging_middleware:99 | [fbd52e8d-e67f-4157-96c0-737842ef302e] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-13 15:17:08 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-13 15:17:08 | SUCCESS | main:request_logging_middleware:114 | [fbd52e8d-e67f-4157-96c0-737842ef302e] Completed | Status=200 | Execution=0.00s
+2026-07-13 15:17:33 | INFO | main:request_logging_middleware:99 | [635d79a0-1d3e-497f-bfcd-6c1d7b78da24] Incoming Request | Method=GET | Path=/precision-medicine/health
+2026-07-13 15:17:33 | SUCCESS | main:request_logging_middleware:114 | [635d79a0-1d3e-497f-bfcd-6c1d7b78da24] Completed | Status=404 | Execution=0.00s
+2026-07-13 15:17:54 | INFO | main:request_logging_middleware:99 | [7339b429-2519-499b-a40d-7b5dca6cd714] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-13 15:17:54 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-13 15:17:54 | SUCCESS | main:request_logging_middleware:114 | [7339b429-2519-499b-a40d-7b5dca6cd714] Completed | Status=200 | Execution=0.00s
+2026-07-13 15:17:59 | INFO | main:request_logging_middleware:99 | [852c56be-bbfc-4fb8-9515-69637a7e0c2e] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-13 15:17:59 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-13 15:17:59 | SUCCESS | main:request_logging_middleware:114 | [852c56be-bbfc-4fb8-9515-69637a7e0c2e] Completed | Status=200 | Execution=0.00s
+2026-07-13 15:23:26 | INFO | main:request_logging_middleware:99 | [eb1fd16d-7007-4422-9f6f-582234114180] Incoming Request | Method=GET | Path=/precision-medicine/health
+2026-07-13 15:23:26 | SUCCESS | main:request_logging_middleware:114 | [eb1fd16d-7007-4422-9f6f-582234114180] Completed | Status=404 | Execution=0.00s
+2026-07-13 15:23:31 | INFO | main:request_logging_middleware:99 | [84d4be6e-0de3-4d6a-aca1-e1db250418f8] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-13 15:23:31 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-13 15:23:31 | SUCCESS | main:request_logging_middleware:114 | [84d4be6e-0de3-4d6a-aca1-e1db250418f8] Completed | Status=200 | Execution=0.01s
+2026-07-13 15:23:42 | INFO | main:request_logging_middleware:99 | [51f28a0b-42eb-4b47-b396-47ee97fecad3] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-13 15:23:42 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-13 15:23:42 | SUCCESS | main:request_logging_middleware:114 | [51f28a0b-42eb-4b47-b396-47ee97fecad3] Completed | Status=200 | Execution=0.00s
+2026-07-13 15:23:42 | INFO | main:request_logging_middleware:99 | [caeadace-0640-4fef-bc01-02c3c9c4a165] Incoming Request | Method=POST | Path=/api/v1/precision-medicine
+2026-07-13 15:23:42 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:42 | [REQUEST RECEIVED] Patient ID: PAT-2026-1001
+2026-07-13 15:23:42 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:46 | Starting Precision Medicine Analysis for Patient: John Smith
+2026-07-13 15:23:42 | INFO | services.precision_medicine_service:generate_precision_plan:36 | Starting Precision Medicine Service for Patient ID: PAT-2026-1001
+2026-07-13 15:23:45 | INFO | implementation.precision_medicine_impl:generate_precision_plan:49 | Precision Medicine Analysis Started for Patient ID: PAT-2026-1001
+2026-07-13 15:23:45 | INFO | agents.genomics_agent:create_genomics_agent:17 | Initializing GenomicsAgent
+2026-07-13 15:23:45 | SUCCESS | agents.genomics_agent:create_genomics_agent:93 | GenomicsAgent initialized successfully
+2026-07-13 15:23:45 | INFO | agents.diagnosis_agent:create_diagnosis_agent:21 | Initializing DiagnosisAgent
+2026-07-13 15:23:45 | SUCCESS | agents.diagnosis_agent:create_diagnosis_agent:108 | DiagnosisAgent initialized successfully
+2026-07-13 15:23:45 | INFO | agents.treatment_agent:create_treatment_agent:21 | Initializing TreatmentAgent
+2026-07-13 15:23:45 | SUCCESS | agents.treatment_agent:create_treatment_agent:126 | TreatmentAgent initialized successfully
+2026-07-13 15:23:45 | INFO | agents.research_agent:create_research_agent:20 | Initializing ResearchAgent
+2026-07-13 15:23:45 | SUCCESS | agents.research_agent:create_research_agent:113 | ResearchAgent initialized successfully
+2026-07-13 15:23:45 | INFO | implementation.precision_medicine_impl:generate_precision_plan:87 | All Precision Medicine Agents Initialized
+2026-07-13 15:23:45 | INFO | implementation.precision_medicine_impl:generate_precision_plan:105 | RoundRobinGroupChat Team Created
+2026-07-13 15:23:45 | INFO | implementation.precision_medicine_impl:generate_precision_plan:172 | Patient Analysis Task Constructed
+2026-07-13 15:29:08 | INFO | implementation.precision_medicine_impl:generate_precision_plan:184 | Agent Collaboration Completed
+2026-07-13 15:29:08 | INFO | implementation.precision_medicine_impl:generate_precision_plan:200 | Collected 9 agent messages
+2026-07-13 15:29:08 | SUCCESS | implementation.precision_medicine_impl:generate_precision_plan:214 | Precision Medicine Analysis Completed in 323.64 seconds
+2026-07-13 15:29:11 | SUCCESS | services.precision_medicine_service:generate_precision_plan:94 | Precision Medicine Service completed successfully for Patient ID: PAT-2026-1001 in 325.89 seconds
+2026-07-13 15:29:11 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:59 | Precision Medicine Analysis Completed | Patient ID: PAT-2026-1001 | Execution Time: 328.28 seconds
+2026-07-13 15:29:11 | SUCCESS | main:request_logging_middleware:114 | [caeadace-0640-4fef-bc01-02c3c9c4a165] Completed | Status=200 | Execution=328.28s
+2026-07-13 15:29:35 | INFO | main:request_logging_middleware:99 | [6686bb51-1f26-411b-af91-bd8107952eb9] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-13 15:29:35 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-13 15:29:35 | SUCCESS | main:request_logging_middleware:114 | [6686bb51-1f26-411b-af91-bd8107952eb9] Completed | Status=200 | Execution=0.00s
+2026-07-13 15:29:35 | INFO | main:request_logging_middleware:99 | [32fbe356-b6a2-4a0a-b910-9f2b01665985] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/version
+2026-07-13 15:29:35 | INFO | routers.precision_medicine_router:get_version:108 | Version Endpoint Invoked
+2026-07-13 15:29:35 | SUCCESS | main:request_logging_middleware:114 | [32fbe356-b6a2-4a0a-b910-9f2b01665985] Completed | Status=200 | Execution=0.01s
+2026-07-13 15:29:49 | INFO | main:request_logging_middleware:99 | [524d4f87-38ae-445b-bd73-9973eacd8483] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-13 15:29:49 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-13 15:29:49 | SUCCESS | main:request_logging_middleware:114 | [524d4f87-38ae-445b-bd73-9973eacd8483] Completed | Status=200 | Execution=0.00s
+2026-07-22 10:16:40 | INFO | config.llm_config:<module>:18 | Using OpenRouter Model: meta-llama/llama-3.3-70b-instruct
+2026-07-22 10:16:44 | INFO | implementation.precision_medicine_impl:__init__:34 | Initializing PrecisionMedicineImplementation
+2026-07-22 10:16:44 | INFO | services.precision_medicine_service:__init__:25 | PrecisionMedicineService initialized successfully
+2026-07-22 10:16:44 | INFO | main:lifespan:23 | ================================================================================
+2026-07-22 10:16:44 | INFO | main:lifespan:26 | Starting Multi-Agent Precision Medicine Platform
+2026-07-22 10:16:44 | INFO | main:lifespan:29 | AutoGen Version: 0.7.5
+2026-07-22 10:16:44 | INFO | main:lifespan:32 | ================================================================================
+2026-07-22 10:18:43 | INFO | main:request_logging_middleware:99 | [44290233-5f3a-4c0f-9d04-3b86ba7bf56a] Incoming Request | Method=GET | Path=/precision-medicine/health
+2026-07-22 10:18:43 | SUCCESS | main:request_logging_middleware:114 | [44290233-5f3a-4c0f-9d04-3b86ba7bf56a] Completed | Status=404 | Execution=0.00s
+2026-07-22 10:19:00 | INFO | main:request_logging_middleware:99 | [58755ab6-08fb-42fd-9a71-34513c870a42] Incoming Request | Method=GET | Path=/docs
+2026-07-22 10:19:00 | SUCCESS | main:request_logging_middleware:114 | [58755ab6-08fb-42fd-9a71-34513c870a42] Completed | Status=200 | Execution=0.01s
+2026-07-22 10:19:01 | INFO | main:request_logging_middleware:99 | [82fc68db-4b20-40b1-b8b5-493718d645c6] Incoming Request | Method=GET | Path=/openapi.json
+2026-07-22 10:19:01 | SUCCESS | main:request_logging_middleware:114 | [82fc68db-4b20-40b1-b8b5-493718d645c6] Completed | Status=200 | Execution=0.17s
+2026-07-22 10:19:27 | INFO | main:request_logging_middleware:99 | [be8da515-37b5-4669-94ee-a4201bdb0e67] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-22 10:19:27 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-22 10:19:27 | SUCCESS | main:request_logging_middleware:114 | [be8da515-37b5-4669-94ee-a4201bdb0e67] Completed | Status=200 | Execution=0.03s
+2026-07-22 10:20:57 | INFO | main:request_logging_middleware:99 | [284aa088-8682-49d2-9e2a-73f4d82bf1df] Incoming Request | Method=GET | Path=/precision-medicine/health
+2026-07-22 10:20:57 | SUCCESS | main:request_logging_middleware:114 | [284aa088-8682-49d2-9e2a-73f4d82bf1df] Completed | Status=404 | Execution=0.00s
+2026-07-22 10:21:53 | INFO | main:request_logging_middleware:99 | [a4d9da63-1b81-4e21-8a09-58480b8d5d72] Incoming Request | Method=GET | Path=/precision-medicine/health
+2026-07-22 10:21:53 | SUCCESS | main:request_logging_middleware:114 | [a4d9da63-1b81-4e21-8a09-58480b8d5d72] Completed | Status=404 | Execution=0.00s
+2026-07-22 10:23:11 | INFO | main:request_logging_middleware:99 | [3f212e0c-efcf-4b99-a6f2-88486db2c7ff] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-22 10:23:11 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-22 10:23:11 | SUCCESS | main:request_logging_middleware:114 | [3f212e0c-efcf-4b99-a6f2-88486db2c7ff] Completed | Status=200 | Execution=0.00s
+2026-07-22 10:23:32 | INFO | main:request_logging_middleware:99 | [00f9888e-be40-4eac-b8a1-b747eab46ce8] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-22 10:23:32 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-22 10:23:32 | SUCCESS | main:request_logging_middleware:114 | [00f9888e-be40-4eac-b8a1-b747eab46ce8] Completed | Status=200 | Execution=0.00s
+2026-07-22 10:23:46 | INFO | main:request_logging_middleware:99 | [34f14cb2-1298-4695-8b4d-b80d14ae3ca9] Incoming Request | Method=GET | Path=/api/v1/precision-medicine/health
+2026-07-22 10:23:46 | INFO | routers.precision_medicine_router:health_check:92 | Precision Medicine Platform Health Check Invoked
+2026-07-22 10:23:46 | SUCCESS | main:request_logging_middleware:114 | [34f14cb2-1298-4695-8b4d-b80d14ae3ca9] Completed | Status=200 | Execution=0.01s
+2026-07-22 10:23:46 | INFO | main:request_logging_middleware:99 | [ae8afa1b-017a-4767-afab-259faf12a160] Incoming Request | Method=POST | Path=/api/v1/precision-medicine
+2026-07-22 10:23:46 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:42 | [REQUEST RECEIVED] Patient ID: PAT-2026-1001
+2026-07-22 10:23:46 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:46 | Starting Precision Medicine Analysis for Patient: John Smith
+2026-07-22 10:23:46 | INFO | services.precision_medicine_service:generate_precision_plan:36 | Starting Precision Medicine Service for Patient ID: PAT-2026-1001
+2026-07-22 10:23:48 | INFO | implementation.precision_medicine_impl:generate_precision_plan:49 | Precision Medicine Analysis Started for Patient ID: PAT-2026-1001
+2026-07-22 10:23:48 | INFO | agents.genomics_agent:create_genomics_agent:17 | Initializing GenomicsAgent
+2026-07-22 10:23:48 | SUCCESS | agents.genomics_agent:create_genomics_agent:93 | GenomicsAgent initialized successfully
+2026-07-22 10:23:48 | INFO | agents.diagnosis_agent:create_diagnosis_agent:21 | Initializing DiagnosisAgent
+2026-07-22 10:23:48 | SUCCESS | agents.diagnosis_agent:create_diagnosis_agent:108 | DiagnosisAgent initialized successfully
+2026-07-22 10:23:48 | INFO | agents.treatment_agent:create_treatment_agent:21 | Initializing TreatmentAgent
+2026-07-22 10:23:48 | SUCCESS | agents.treatment_agent:create_treatment_agent:126 | TreatmentAgent initialized successfully
+2026-07-22 10:23:48 | INFO | agents.research_agent:create_research_agent:20 | Initializing ResearchAgent
+2026-07-22 10:23:48 | SUCCESS | agents.research_agent:create_research_agent:113 | ResearchAgent initialized successfully
+2026-07-22 10:23:48 | INFO | implementation.precision_medicine_impl:generate_precision_plan:87 | All Precision Medicine Agents Initialized
+2026-07-22 10:23:48 | INFO | implementation.precision_medicine_impl:generate_precision_plan:105 | RoundRobinGroupChat Team Created
+2026-07-22 10:23:48 | INFO | implementation.precision_medicine_impl:generate_precision_plan:172 | Patient Analysis Task Constructed
+2026-07-22 10:25:16 | INFO | main:request_logging_middleware:99 | [89281f93-e416-43b8-94b6-6fa537a8d11a] Incoming Request | Method=OPTIONS | Path=/api/v1/precision-medicine
+2026-07-22 10:25:16 | SUCCESS | main:request_logging_middleware:114 | [89281f93-e416-43b8-94b6-6fa537a8d11a] Completed | Status=200 | Execution=0.00s
+2026-07-22 10:25:16 | INFO | main:request_logging_middleware:99 | [cd604ad3-7fc9-428d-baf2-c4ecb2bb3983] Incoming Request | Method=POST | Path=/api/v1/precision-medicine
+2026-07-22 10:25:16 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:42 | [REQUEST RECEIVED] Patient ID: PAT-2026-1022
+2026-07-22 10:25:16 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:46 | Starting Precision Medicine Analysis for Patient: John Smith
+2026-07-22 10:25:16 | INFO | services.precision_medicine_service:generate_precision_plan:36 | Starting Precision Medicine Service for Patient ID: PAT-2026-1022
+2026-07-22 10:25:16 | ERROR | services.precision_medicine_service:generate_precision_plan:108 | Precision Medicine Service failed for Patient ID: PAT-2026-1022 after 0.00 seconds. Error: Run with UUID 8314557345214e46a247383a555f6edc is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 340
+               │     └ 3
+               └ <function _main at 0x000001C758F205E0>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 340
+           │    └ <function BaseProcess._bootstrap at 0x000001C758A00720>
+           └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x000001C7589FBC40>
+    └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x000001C758CED510>, 'target': <bound method Server.run of <uvicorn.server.Server...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+    │    └ <function subprocess_started at 0x000001C75B17F880>
+    └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=372, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x000001C75B30F090>>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x000001C75B0F7BA0>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x000001C758CED510>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x000001C75B30F090>
+           │           │    │             └ [<socket.socket fd=372, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x000001C75B17E660>
+           │           └ <uvicorn.server.Server object at 0x000001C75B30F090>
+           └ <function asyncio_run at 0x000001C75AFEF740>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000001C75B2F87C0>
+           │      └ <function Runner.run at 0x000001C75AA50900>
+           └ <asyncio.runners.Runner object at 0x000001C75AB3AE50>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\sit...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001C75AA4E480>
+           │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001C75AB3AE50>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001C75AA4E3E0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001C75AA50220>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001C75A995BC0>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+          │    │   │      │                      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001C77F5CAF20>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10>
+          └ <starlette.middleware.base.BaseHTTPMiddleware object at 0x000001C77F342C50>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 95, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'content-length': '2540', 'sec-ch-ua-platform': '"Windows"', '...
+          │    │               │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001C77F5CAF20>
+          │    │               │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001C77F326980>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 153, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10...
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001C77EE23990>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10...
+          │                            │    │    │     │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001C77FF8EF90>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001C77F341A90>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001C77EE23990>
+          └ <function wrap_app_handling_exceptions at 0x000001C75C235940>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001C77F341A90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x000001C77F339ED0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001C77F341A90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │    │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001C77F339ED0>>
+          └ <fastapi.routing.APIRouter object at 0x000001C77F339ED0>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │     │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x000001C75C237060>
+          └ APIRoute(path='/api/v1/precision-medicine', name='generate_precision_medicine_plan', methods=['POST'])
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x000001C77F326FC0>
+          └ APIRoute(path='/api/v1/precision-medicine', name='generate_precision_medicine_plan', methods=['POST'])
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │                            │    │        │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001C77FF8ED50>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001C77F5CBD80>
+          └ <function wrap_app_handling_exceptions at 0x000001C75C235940>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77FECAFC0>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001C77F5CBD80>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001C77FF8ED50>
+                     └ <function get_request_handler.<locals>.app at 0x000001C77F3276A0>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001C75C2554E0>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': PrecisionMedicineRequest(patient_id='PAT-2026-1022', patient_name='John Smith', date_of_birth=datetime.date(1968,...
+                 │         └ <function generate_precision_medicine_plan at 0x000001C75C35A3E0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\routers\precision_medicine_router.py", line 51, in generate_precision_medicine_plan
+    response = await service.generate_precision_plan(
+                     │       └ <function PrecisionMedicineService.generate_precision_plan at 0x000001C77EE15940>
+                     └ <services.precision_medicine_service.PrecisionMedicineService object at 0x000001C75C375F50>
+
+> File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\services\precision_medicine_service.py", line 45, in generate_precision_plan
+    with mlflow.start_run(
+         │      └ <function start_run at 0x000001C77C6F6C00>
+         └ <module 'mlflow' from 'C:\\Users\\Uppaluru\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\mlflow\\__init__...
+
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\mlflow\tracking\fluent.py", line 543, in start_run
+    raise Exception(
+
+Exception: Run with UUID 8314557345214e46a247383a555f6edc is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2026-07-22 10:25:16 | ERROR | routers.precision_medicine_router:generate_precision_medicine_plan:73 | Precision Medicine Analysis Failed | Patient ID: PAT-2026-1022 | Execution Time: 0.11 seconds | Error: Run with UUID 8314557345214e46a247383a555f6edc is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+Traceback (most recent call last):
+
+  File "<string>", line 1, in <module>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               │     │   └ 340
+               │     └ 3
+               └ <function _main at 0x000001C758F205E0>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+           │    │          └ 340
+           │    └ <function BaseProcess._bootstrap at 0x000001C758A00720>
+           └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 314, in _bootstrap
+    self.run()
+    │    └ <function BaseProcess.run at 0x000001C7589FBC40>
+    └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\multiprocessing\process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {'config': <uvicorn.config.Config object at 0x000001C758CED510>, 'target': <bound method Server.run of <uvicorn.server.Server...
+    │    │        │    │        └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+    │    │        │    └ ()
+    │    │        └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+    │    └ <function subprocess_started at 0x000001C75B17F880>
+    └ <SpawnProcess name='SpawnProcess-1' parent=24588 started>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+    │              └ [<socket.socket fd=372, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+    └ <bound method Server.run of <uvicorn.server.Server object at 0x000001C75B30F090>>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\server.py", line 75, in run
+    return asyncio_run(self.serve(sockets=sockets), loop_factory=self.config.get_loop_factory())
+           │           │    │             │                      │    │      └ <function Config.get_loop_factory at 0x000001C75B0F7BA0>
+           │           │    │             │                      │    └ <uvicorn.config.Config object at 0x000001C758CED510>
+           │           │    │             │                      └ <uvicorn.server.Server object at 0x000001C75B30F090>
+           │           │    │             └ [<socket.socket fd=372, family=2, type=1, proto=6, laddr=('127.0.0.1', 8000)>]
+           │           │    └ <function Server.serve at 0x000001C75B17E660>
+           │           └ <uvicorn.server.Server object at 0x000001C75B30F090>
+           └ <function asyncio_run at 0x000001C75AFEF740>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\uvicorn\_compat.py", line 30, in asyncio_run
+    return runner.run(main)
+           │      │   └ <coroutine object Server.serve at 0x000001C75B2F87C0>
+           │      └ <function Runner.run at 0x000001C75AA50900>
+           └ <asyncio.runners.Runner object at 0x000001C75AB3AE50>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<Server.serve() running at C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\sit...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x000001C75AA4E480>
+           │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x000001C75AB3AE50>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 641, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x000001C75AA4E3E0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 608, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001C75AA50220>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1936, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001C75A995BC0>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=None>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=None>)>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+          │    │   │      │                      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001C77F5CAF20>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10>
+          └ <starlette.middleware.base.BaseHTTPMiddleware object at 0x000001C77F342C50>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 95, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+          │    │               │      │        │                     └ Headers({'host': '127.0.0.1:8000', 'connection': 'keep-alive', 'content-length': '2540', 'sec-ch-ua-platform': '"Windows"', '...
+          │    │               │      │        └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.send_no_error at 0x000001C77F5CAF20>
+          │    │               │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │               └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function CORSMiddleware.simple_response at 0x000001C77F326980>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\cors.py", line 153, in simple_response
+    await self.app(scope, receive, send)
+          │    │   │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10...
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001C77EE23990>
+          └ <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+          │                            │    │    │     │      │        └ functools.partial(<bound method CORSMiddleware.send of <starlette.middleware.cors.CORSMiddleware object at 0x000001C77F342C10...
+          │                            │    │    │     │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │                            │    │    │     └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    │    └ <starlette.requests.Request object at 0x000001C77FF8EF90>
+          │                            │    └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001C77F341A90>
+          │                            └ <starlette.middleware.exceptions.ExceptionMiddleware object at 0x000001C77EE23990>
+          └ <function wrap_app_handling_exceptions at 0x000001C75C235940>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001C77F341A90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <fastapi.routing.APIRouter object at 0x000001C77F339ED0>
+          └ <fastapi.middleware.asyncexitstack.AsyncExitStackMiddleware object at 0x000001C77F341A90>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+          │    │                │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │    │                │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │                └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <bound method Router.app of <fastapi.routing.APIRouter object at 0x000001C77F339ED0>>
+          └ <fastapi.routing.APIRouter object at 0x000001C77F339ED0>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+          │     │      │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │     │      │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │     │      └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │     └ <function Route.handle at 0x000001C75C237060>
+          └ APIRoute(path='/api/v1/precision-medicine', name='generate_precision_medicine_plan', methods=['POST'])
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+          │    │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │    │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │    │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │    └ <function request_response.<locals>.app at 0x000001C77F326FC0>
+          └ APIRoute(path='/api/v1/precision-medicine', name='generate_precision_medicine_plan', methods=['POST'])
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 134, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+          │                            │    │        │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77F5CAC00>
+          │                            │    │        │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │                            │    │        └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          │                            │    └ <starlette.requests.Request object at 0x000001C77FF8ED50>
+          │                            └ <function request_response.<locals>.app.<locals>.app at 0x000001C77F5CBD80>
+          └ <function wrap_app_handling_exceptions at 0x000001C75C235940>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+          │   │      │        └ <function wrap_app_handling_exceptions.<locals>.wrapped_app.<locals>.sender at 0x000001C77FECAFC0>
+          │   │      └ <function BaseHTTPMiddleware.__call__.<locals>.call_next.<locals>.receive_or_disconnect at 0x000001C77F5CAD40>
+          │   └ {'type': 'http', 'asgi': {'version': '3.0', 'spec_version': '2.3'}, 'http_version': '1.1', 'server': ('127.0.0.1', 8000), 'cl...
+          └ <function request_response.<locals>.app.<locals>.app at 0x000001C77F5CBD80>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 120, in app
+    response = await f(request)
+                     │ └ <starlette.requests.Request object at 0x000001C77FF8ED50>
+                     └ <function get_request_handler.<locals>.app at 0x000001C77F3276A0>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 674, in app
+    raw_response = await run_endpoint_function(
+                         └ <function run_endpoint_function at 0x000001C75C2554E0>
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 328, in run_endpoint_function
+    return await dependant.call(**values)
+                 │         │      └ {'request': PrecisionMedicineRequest(patient_id='PAT-2026-1022', patient_name='John Smith', date_of_birth=datetime.date(1968,...
+                 │         └ <function generate_precision_medicine_plan at 0x000001C75C35A3E0>
+                 └ Dependant(path_params=[], query_params=[], header_params=[], cookie_params=[], body_params=[ModelField(field_info=Body(Pydant...
+
+> File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\routers\precision_medicine_router.py", line 51, in generate_precision_medicine_plan
+    response = await service.generate_precision_plan(
+                     │       └ <function PrecisionMedicineService.generate_precision_plan at 0x000001C77EE15940>
+                     └ <services.precision_medicine_service.PrecisionMedicineService object at 0x000001C75C375F50>
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\services\precision_medicine_service.py", line 115, in generate_precision_plan
+    raise ex
+
+  File "E:\Freelancing_Projects\Autogen\Expert_Level\MultiAgent_Precision_Medicine_Platform\backend\multiagent-precison_medicine-python-app\services\precision_medicine_service.py", line 45, in generate_precision_plan
+    with mlflow.start_run(
+         │      └ <function start_run at 0x000001C77C6F6C00>
+         └ <module 'mlflow' from 'C:\\Users\\Uppaluru\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\mlflow\\__init__...
+
+  File "C:\Users\Uppaluru\AppData\Local\Programs\Python\Python311\Lib\site-packages\mlflow\tracking\fluent.py", line 543, in start_run
+    raise Exception(
+
+Exception: Run with UUID 8314557345214e46a247383a555f6edc is already active. To start a new run, first end the current run with mlflow.end_run(). To start a nested run, call start_run with nested=True
+2026-07-22 10:25:16 | SUCCESS | main:request_logging_middleware:114 | [cd604ad3-7fc9-428d-baf2-c4ecb2bb3983] Completed | Status=500 | Execution=0.18s
+2026-07-22 10:26:40 | INFO | implementation.precision_medicine_impl:generate_precision_plan:184 | Agent Collaboration Completed
+2026-07-22 10:26:40 | INFO | implementation.precision_medicine_impl:generate_precision_plan:200 | Collected 9 agent messages
+2026-07-22 10:26:40 | SUCCESS | implementation.precision_medicine_impl:generate_precision_plan:214 | Precision Medicine Analysis Completed in 171.22 seconds
+2026-07-22 10:26:42 | SUCCESS | services.precision_medicine_service:generate_precision_plan:94 | Precision Medicine Service completed successfully for Patient ID: PAT-2026-1001 in 173.67 seconds
+2026-07-22 10:26:42 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:59 | Precision Medicine Analysis Completed | Patient ID: PAT-2026-1001 | Execution Time: 176.00 seconds
+2026-07-22 10:26:42 | SUCCESS | main:request_logging_middleware:114 | [ae8afa1b-017a-4767-afab-259faf12a160] Completed | Status=200 | Execution=176.00s
+2026-07-22 10:27:09 | INFO | main:request_logging_middleware:99 | [a742f39b-9c90-4b6c-adec-ee68352f7987] Incoming Request | Method=POST | Path=/api/v1/precision-medicine
+2026-07-22 10:27:09 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:42 | [REQUEST RECEIVED] Patient ID: PAT-2026-1022
+2026-07-22 10:27:09 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:46 | Starting Precision Medicine Analysis for Patient: John Smith
+2026-07-22 10:27:09 | INFO | services.precision_medicine_service:generate_precision_plan:36 | Starting Precision Medicine Service for Patient ID: PAT-2026-1022
+2026-07-22 10:27:11 | INFO | implementation.precision_medicine_impl:generate_precision_plan:49 | Precision Medicine Analysis Started for Patient ID: PAT-2026-1022
+2026-07-22 10:27:11 | INFO | agents.genomics_agent:create_genomics_agent:17 | Initializing GenomicsAgent
+2026-07-22 10:27:11 | SUCCESS | agents.genomics_agent:create_genomics_agent:93 | GenomicsAgent initialized successfully
+2026-07-22 10:27:11 | INFO | agents.diagnosis_agent:create_diagnosis_agent:21 | Initializing DiagnosisAgent
+2026-07-22 10:27:11 | SUCCESS | agents.diagnosis_agent:create_diagnosis_agent:108 | DiagnosisAgent initialized successfully
+2026-07-22 10:27:11 | INFO | agents.treatment_agent:create_treatment_agent:21 | Initializing TreatmentAgent
+2026-07-22 10:27:11 | SUCCESS | agents.treatment_agent:create_treatment_agent:126 | TreatmentAgent initialized successfully
+2026-07-22 10:27:11 | INFO | agents.research_agent:create_research_agent:20 | Initializing ResearchAgent
+2026-07-22 10:27:11 | SUCCESS | agents.research_agent:create_research_agent:113 | ResearchAgent initialized successfully
+2026-07-22 10:27:11 | INFO | implementation.precision_medicine_impl:generate_precision_plan:87 | All Precision Medicine Agents Initialized
+2026-07-22 10:27:11 | INFO | implementation.precision_medicine_impl:generate_precision_plan:105 | RoundRobinGroupChat Team Created
+2026-07-22 10:27:11 | INFO | implementation.precision_medicine_impl:generate_precision_plan:172 | Patient Analysis Task Constructed
+2026-07-22 10:31:02 | INFO | implementation.precision_medicine_impl:generate_precision_plan:184 | Agent Collaboration Completed
+2026-07-22 10:31:02 | INFO | implementation.precision_medicine_impl:generate_precision_plan:200 | Collected 9 agent messages
+2026-07-22 10:31:02 | SUCCESS | implementation.precision_medicine_impl:generate_precision_plan:214 | Precision Medicine Analysis Completed in 231.35 seconds
+2026-07-22 10:31:05 | SUCCESS | services.precision_medicine_service:generate_precision_plan:94 | Precision Medicine Service completed successfully for Patient ID: PAT-2026-1022 in 233.59 seconds
+2026-07-22 10:31:05 | INFO | routers.precision_medicine_router:generate_precision_medicine_plan:59 | Precision Medicine Analysis Completed | Patient ID: PAT-2026-1022 | Execution Time: 236.06 seconds
+2026-07-22 10:31:05 | SUCCESS | main:request_logging_middleware:114 | [a742f39b-9c90-4b6c-adec-ee68352f7987] Completed | Status=200 | Execution=236.06s
+2026-07-22 10:32:22 | INFO | main:lifespan:38 | ================================================================================
+2026-07-22 10:32:22 | INFO | main:lifespan:41 | Stopping Multi-Agent Precision Medicine Platform
+2026-07-22 10:32:22 | INFO | main:lifespan:44 | ================================================================================
