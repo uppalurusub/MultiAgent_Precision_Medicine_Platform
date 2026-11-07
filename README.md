@@ -1,36 +1,146 @@
 # 🧬 Multi-Agent Precision Medicine Platform
 
-An AI-powered Multi-Agent Precision Medicine Platform that leverages Large Language Models (LLMs) and specialized AI agents to analyze patient clinical data, genomic information, biomarkers, laboratory results, and medical history to generate personalized, evidence-based treatment recommendations.
-
-The platform combines **FastAPI**, **AutoGen**, **React (TypeScript + Vite)**, and **Streamlit** to deliver an intelligent clinical decision support system capable of assisting healthcare professionals with precision medicine workflows.
+> AI-Powered Precision Medicine Decision Support Platform built using **AutoGen 0.7.5**, **FastAPI**, **LLM Agents**, and **MLflow** for collaborative genomic interpretation, diagnosis support, personalized treatment planning, pharmacogenomics, and clinical research recommendations.
 
 ---
 
-# Architecture
+# Overview
+
+The **Multi-Agent Precision Medicine Platform** is an intelligent clinical decision support system that orchestrates multiple specialized AI agents to analyze complex patient cases involving:
+
+* Clinical Diagnoses
+* Genomic Variants
+* Biomarkers
+* Laboratory Results
+* Family History
+* Lifestyle Factors
+* Current Medications
+
+Instead of relying on a single LLM, the platform enables multiple expert agents to collaborate and produce evidence-based personalized recommendations.
+
+The platform follows a modular enterprise architecture:
 
 ```
-                        +-----------------------+
-                        |   React Frontend      |
-                        | (TypeScript + Vite)   |
-                        +-----------+-----------+
-                                    |
-                                    |
-                                    v
-                        +-----------------------+
-                        |     FastAPI API       |
-                        +-----------+-----------+
-                                    |
-               ---------------------------------------------
-               |            |             |                 |
-               |            |             |                 |
-               v            v             v                 v
-      Genomics Agent  Diagnosis Agent Treatment Agent Research Agent
-               |            |             |                 |
-               ---------------------------------------------
-                                    |
-                                    v
-                     Personalized Precision Medicine Report
+FastAPI
+      │
+      ▼
+Router
+      │
+      ▼
+Service Layer
+      │
+      ▼
+Implementation
+      │
+      ▼
+AutoGen Multi-Agent Team
+      │
+      ├── Genomics Agent
+      ├── Diagnosis Agent
+      ├── Treatment Agent
+      └── Research Agent
+      │
+      ▼
+Integrated Precision Medicine Report
 ```
+
+---
+
+# Features
+
+* Multi-Agent AI Collaboration
+* Precision Medicine Decision Support
+* Genomic Variant Interpretation
+* Biomarker Analysis
+* Personalized Treatment Recommendations
+* Drug-Gene Interaction Analysis
+* Clinical Trial Matching
+* Research Evidence Summarization
+* Risk Assessment
+* Tumor Board Recommendations
+* REST API
+* Enterprise Logging using Loguru
+* MLflow Integration
+* FastAPI Swagger Documentation
+
+---
+
+# AI Agents
+
+## 1. Genomics Agent
+
+Responsibilities
+
+* Interpret genomic mutations
+* Assess pathogenic variants
+* Evaluate biomarkers
+* Analyze pharmacogenomics
+* Predict mutation significance
+
+Example
+
+```
+EGFR L858R Mutation
+↓
+
+Sensitive to EGFR Tyrosine Kinase Inhibitors
+↓
+
+Recommend Targeted Therapy
+```
+
+---
+
+## 2. Diagnosis Agent
+
+Responsibilities
+
+* Analyze diagnoses
+* Review symptoms
+* Correlate laboratory findings
+* Evaluate disease severity
+* Generate differential diagnosis
+
+Produces
+
+* Disease assessment
+* Severity scoring
+* Diagnostic summary
+
+---
+
+## 3. Treatment Agent
+
+Responsibilities
+
+* Personalized therapy planning
+* Medication optimization
+* Drug interaction analysis
+* Precision treatment recommendations
+* Follow-up planning
+
+Produces
+
+* First-line therapy
+* Alternative therapies
+* Precision treatment pathway
+
+---
+
+## 4. Research Agent
+
+Responsibilities
+
+* Clinical trial matching
+* Latest research summary
+* Evidence synthesis
+* Guideline recommendations
+
+Produces
+
+* Research evidence
+* Clinical trial eligibility
+* Emerging therapies
 
 ---
 
@@ -38,22 +148,23 @@ The platform combines **FastAPI**, **AutoGen**, **React (TypeScript + Vite)**, a
 
 ```
 MultiAgent_Precision_Medicine_Platform/
-
 │
-├── backend/
-│   ├── multiagent-precison_medicine-python-app/
-│   │
+├── app/
 │   ├── agents/
-│   │      genomics_agent.py
 │   │      diagnosis_agent.py
+│   │      genomics_agent.py
 │   │      treatment_agent.py
 │   │      research_agent.py
 │   │
 │   ├── config/
 │   │      llm_config.py
+│   │      llm_models_config.py
 │   │
 │   ├── implementation/
 │   │      precision_medicine_impl.py
+│   │
+│   ├── memory/
+│   │      coding_memory.py
 │   │
 │   ├── models/
 │   │      request_model.py
@@ -65,259 +176,88 @@ MultiAgent_Precision_Medicine_Platform/
 │   ├── services/
 │   │      precision_medicine_service.py
 │   │
-│   ├── memory/
-│   │      coding_memory.py
-│   │
 │   ├── utils/
+│   │      json_utils.py
 │   │      logger.py
+│   │      prompt_templates.py
 │   │
-│   ├── logs/
-│   ├── main.py
-│   └── README.md
+│   └── main.py
 │
-├── ui/
-│   ├── reactjs/
-│   │      multiagent-precison_medicine-react-app/
-│   │
-│   └── streamlit/
-│          multiagent-precison_medicine-streamlit-app/
-│
+├── logs/
 ├── requirements.txt
-└── README.md
+├── precision_medicine_request.json
+├── mlflow.db
+└── .env
 ```
-
----
-
-# Key Features
-
-- Multi-Agent AI architecture
-- Personalized precision medicine recommendations
-- Genomic variant interpretation
-- Clinical diagnosis assistance
-- Treatment recommendation generation
-- Clinical trial matching
-- Biomarker analysis
-- Laboratory result interpretation
-- Family history assessment
-- Lifestyle risk analysis
-- Research evidence summarization
-- Clinical decision support
-- RESTful FastAPI backend
-- React TypeScript dashboard
-- Streamlit clinical interface
-- Structured logging
-- AutoGen agent collaboration
-
----
-
-# AI Agents
-
-## 🧬 Genomics Agent
-
-Responsible for
-
-- Variant interpretation
-- Mutation analysis
-- Pharmacogenomics
-- Biomarker analysis
-- Genomic risk assessment
-
----
-
-## 🩺 Diagnosis Agent
-
-Responsible for
-
-- Clinical diagnosis
-- Differential diagnosis
-- Disease staging
-- Symptom correlation
-- Risk stratification
-
----
-
-## 💊 Treatment Agent
-
-Responsible for
-
-- Personalized treatment planning
-- Drug recommendations
-- Therapy optimization
-- Precision medicine strategy
-- Follow-up recommendations
-
----
-
-## 📚 Research Agent
-
-Responsible for
-
-- Latest research evidence
-- Clinical guidelines
-- Literature summary
-- Clinical trial matching
-- Evidence-based recommendations
 
 ---
 
 # Technology Stack
 
-## Backend
-
-- Python 3.11+
-- FastAPI
-- AutoGen 0.7.5
-- OpenAI
-- Loguru
-- MLflow
-- Uvicorn
-- Pydantic
-
----
-
-## Frontend
-
-- React 19
-- TypeScript
-- Vite
-- React Markdown
-- Remark GFM
+| Component           | Technology              |
+| ------------------- | ----------------------- |
+| Backend             | FastAPI                 |
+| AI Framework        | AutoGen 0.7.5           |
+| LLM Communication   | OpenAI / Compatible LLM |
+| Logging             | Loguru                  |
+| Experiment Tracking | MLflow                  |
+| Validation          | Pydantic                |
+| API                 | REST                    |
+| Server              | Uvicorn                 |
 
 ---
 
-## Streamlit
-
-- Streamlit
-- Python
-
----
-
-# Backend Architecture
-
-```
-Client
-
-   │
-
-   ▼
-
-FastAPI Router
-
-   │
-
-   ▼
-
-Service Layer
-
-   │
-
-   ▼
-
-Implementation Layer
-
-   │
-
-   ▼
-
-Multi-Agent Orchestration
-
-   │
-
-   ├── Genomics Agent
-
-   ├── Diagnosis Agent
-
-   ├── Treatment Agent
-
-   └── Research Agent
-
-   │
-
-   ▼
-
-LLM
-
-   │
-
-   ▼
-
-Response
-```
-
----
-
-# Request Workflow
+# Precision Medicine Workflow
 
 ```
 Patient Data
-
-↓
-
-API Request
-
-↓
-
+      │
+      ▼
 Validation
-
-↓
-
-Genomics Analysis
-
-↓
-
-Diagnosis Analysis
-
-↓
-
-Treatment Recommendation
-
-↓
-
-Research Evidence
-
-↓
-
-Clinical Trial Matching
-
-↓
-
-Final Precision Medicine Report
+      │
+      ▼
+Router
+      │
+      ▼
+Service
+      │
+      ▼
+Implementation
+      │
+      ▼
+RoundRobinGroupChat
+      │
+ ┌────┼───────────┬───────────┐
+ ▼    ▼           ▼           ▼
+Genomics Diagnosis Treatment Research
+Agent    Agent      Agent      Agent
+ └──────────────┬──────────────┘
+                ▼
+Integrated Clinical Report
+                ▼
+REST Response
 ```
 
 ---
 
-# API Endpoints
+# Request Model
 
-## Generate Precision Medicine Plan
+The API accepts comprehensive patient information including:
 
-```
-POST /precision-medicine
-```
-
-Generates
-
-- Genomic analysis
-- Diagnostic assessment
-- Personalized treatment
-- Clinical trial matching
-- Research summary
-- Precision medicine report
-
----
-
-## Health Check
-
-```
-GET /precision-medicine/health
-```
-
----
-
-## Version
-
-```
-GET /precision-medicine/version
-```
+* Patient Information
+* Demographics
+* Diagnoses
+* Symptoms
+* Genomic Variants
+* Biomarkers
+* Laboratory Results
+* Current Medications
+* Allergies
+* Family History
+* Lifestyle Factors
+* Clinical Notes
+* Treatment Goals
+* Requested Analyses
 
 ---
 
@@ -325,32 +265,59 @@ GET /precision-medicine/version
 
 ```json
 {
-  "patient_id": "P1001",
-  "patient_name": "John Doe",
+  "patient_id": "PAT-2026-1001",
+  "patient_name": "John Smith",
   "demographics": {
-    "age": 52,
+    "age": 58,
     "gender": "Male"
   },
-  "diagnoses": [],
-  "symptoms": [],
-  "genomic_variants": [],
-  "lab_results": [],
-  "current_medications": [],
-  "clinical_notes": "Patient diagnosed with lung cancer."
+  "diagnoses": [
+    {
+      "diagnosis_code": "C34.90",
+      "diagnosis_name": "Non-Small Cell Lung Cancer"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom_name": "Persistent Cough"
+    }
+  ],
+  "genomic_variants": [
+    {
+      "gene": "EGFR",
+      "mutation": "L858R",
+      "pathogenicity": "Pathogenic"
+    }
+  ]
 }
 ```
 
 ---
 
-# Backend Installation
+# Expected Response
+
+The platform generates a comprehensive precision medicine report containing:
+
+* Genomic Findings
+* Biomarker Interpretation
+* Diagnosis Assessment
+* Personalized Treatment Recommendations
+* Drug-Gene Interactions
+* Clinical Trial Matches
+* Research Evidence
+* Risk Assessment
+* Tumor Board Recommendations
+* Executive Summary
+
+---
+
+# Installation
 
 ## Clone Repository
 
 ```bash
 git clone https://github.com/your-org/MultiAgent_Precision_Medicine_Platform.git
-```
 
-```
 cd MultiAgent_Precision_Medicine_Platform
 ```
 
@@ -368,7 +335,7 @@ Windows
 .venv\Scripts\activate
 ```
 
-Linux/Mac
+Linux / macOS
 
 ```bash
 source .venv/bin/activate
@@ -384,198 +351,177 @@ pip install -r requirements.txt
 
 ---
 
-## Configure Environment
+# Environment Variables
 
-Create
-
-```
-backend/.env
-```
+Create a `.env` file.
 
 Example
 
 ```env
 OPENAI_API_KEY=your_api_key
-OPENAI_MODEL=gpt-4o
+OPENAI_MODEL=gpt-4.1
+```
+
+Update the values according to your LLM provider and configuration.
+
+---
+
+# Running the Application
+
+```bash
+uvicorn app.main:app --reload
+```
+
+Server
+
+```
+http://127.0.0.1:8000
 ```
 
 ---
 
-## Run Backend
+# API Documentation
 
-```bash
-uvicorn main:app --reload
-```
-
-Swagger UI
+Swagger
 
 ```
 http://localhost:8000/docs
 ```
 
----
-
-# React Frontend
-
-Navigate to
+ReDoc
 
 ```
-ui/reactjs/multiagent-precison_medicine-react-app
-```
-
-Install packages
-
-```bash
-npm install
-```
-
-Run
-
-```bash
-npm run dev
-```
-
-Application
-
-```
-http://localhost:5173
-```
-
-Build
-
-```bash
-npm run build
+http://localhost:8000/redoc
 ```
 
 ---
 
-# Streamlit UI
-
-Navigate to
+# API Endpoint
 
 ```
-ui/streamlit/multiagent-precison_medicine-streamlit-app
+POST /precision-medicine/analyze
 ```
 
-Install
+Example
 
 ```bash
-pip install -r requirements.txt
+curl -X POST \
+http://localhost:8000/precision-medicine/analyze \
+-H "Content-Type: application/json" \
+-d @precision_medicine_request.json
 ```
-
-Run
-
-```bash
-streamlit run app.py
-```
-
----
-
-# Backend Dependencies
-
-- FastAPI
-- AutoGen
-- AutoGen AgentChat
-- AutoGen Extensions
-- OpenAI
-- Uvicorn
-- Streamlit
-- MLflow
-- Loguru
-- python-dotenv
-
----
-
-# Input Data
-
-The platform supports
-
-- Patient demographics
-- Diagnoses
-- Symptoms
-- Genomic variants
-- Biomarkers
-- Laboratory results
-- Current medications
-- Allergies
-- Family history
-- Lifestyle factors
-- Clinical notes
-- Treatment goals
-
----
-
-# Output
-
-The AI-generated report includes
-
-- Genomic interpretation
-- Diagnostic assessment
-- Personalized treatment recommendations
-- Drug suggestions
-- Biomarker interpretation
-- Clinical trial opportunities
-- Research evidence summary
-- Follow-up recommendations
-- Precision medicine insights
 
 ---
 
 # Logging
 
-Application logs are stored in
+The application uses **Loguru** for centralized logging.
+
+Generated log files include:
 
 ```
 logs/
+    healthcare.log
+    error.log
+    medical_coding.log
+    medical_coding_error.log
 ```
 
-Includes
+Logs capture:
 
-- API requests
-- Agent execution
-- Errors
-- Performance metrics
-- System events
+* API Requests
+* Agent Initialization
+* Agent Conversations
+* Exceptions
+* Execution Time
+* Diagnostics
+
+---
+
+# MLflow Integration
+
+MLflow can be used to track:
+
+* Prompt Experiments
+* LLM Performance
+* Precision Medicine Runs
+* Response Quality
+* Evaluation Metrics
+
+Start the tracking server:
+
+```bash
+mlflow ui
+```
+
+Open:
+
+```
+http://localhost:5000
+```
+
+---
+
+# Example Use Cases
+
+* Precision Oncology
+* Rare Disease Diagnosis
+* Pharmacogenomics
+* Personalized Cancer Therapy
+* Biomarker Interpretation
+* Genomic Variant Analysis
+* Clinical Trial Screening
+* Tumor Board Decision Support
+* Translational Medicine
+* Academic Research
+
+---
+
+# Advantages
+
+* Modular Architecture
+* Scalable Multi-Agent Design
+* Explainable AI Recommendations
+* Extensible Agent Framework
+* Enterprise Logging
+* Strong Input Validation
+* Production-Ready FastAPI Backend
+* AutoGen 0.7.5 Compatible
+* Maintainable Router → Service → Implementation Pattern
 
 ---
 
 # Future Enhancements
 
-- Multi-LLM support
-- LangGraph orchestration
-- Retrieval-Augmented Generation (RAG)
-- Vector database integration
-- EHR/FHIR interoperability
-- Clinical guideline retrieval
-- Drug interaction analysis
-- Medical imaging support
-- Explainable AI (XAI)
-- Human-in-the-loop review
-- Audit trail
-- Role-based access control
-- Docker support
-- Kubernetes deployment
-- Azure OpenAI integration
+* Retrieval-Augmented Generation (RAG)
+* FHIR & HL7 Integration
+* DICOM Imaging Analysis
+* Real-Time Genomic Database Integration
+* Drug Knowledge Graphs
+* Clinical Guideline Retrieval
+* Multi-LLM Consensus
+* Human-in-the-Loop Review
+* PDF Report Generation
+* Streamlit Dashboard
+* Multi-language Support
+* Audit Trail & Explainability
 
 ---
 
-# Healthcare Use Cases
+# Disclaimer
 
-- Precision oncology
-- Rare disease diagnosis
-- Pharmacogenomics
-- Personalized treatment planning
-- Clinical decision support
-- Clinical trial matching
-- Genomic interpretation
-- Tumor board preparation
-- Translational medicine
-- Research assistance
+This platform is intended for **research, educational, and decision-support purposes only**. It is **not** a substitute for professional medical judgment. All recommendations should be reviewed and validated by qualified healthcare professionals before being used in patient care.
 
 ---
 
 # License
 
-This project is intended for educational, research, and healthcare AI development purposes.
+MIT License
 
 ---
+
+# Author
+
+**Multi-Agent Precision Medicine Platform**
+
+AI-Powered Clinical Decision Support using **FastAPI**, **AutoGen 0.7.5**, **LLM Agents**, **MLflow**, and **Precision Medicine**.

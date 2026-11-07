@@ -1,0 +1,147 @@
+{
+  "patient_id": "PAT-2026-1001",
+  "patient_name": "John Smith",
+  "date_of_birth": "1968-04-15",
+  "demographics": {
+    "age": 58,
+    "gender": "Male",
+    "ethnicity": "Caucasian",
+    "weight_kg": 82.5,
+    "height_cm": 178.0
+  },
+  "diagnoses": [
+    {
+      "diagnosis_code": "C34.90",
+      "diagnosis_name": "Non-Small Cell Lung Cancer",
+      "stage": "IIIA",
+      "severity": "High",
+      "diagnosis_date": "2025-11-10"
+    },
+    {
+      "diagnosis_code": "E11.9",
+      "diagnosis_name": "Type 2 Diabetes Mellitus",
+      "stage": "Chronic",
+      "severity": "Moderate",
+      "diagnosis_date": "2020-03-15"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom_name": "Persistent Cough",
+      "duration": "4 months",
+      "severity": "Moderate"
+    },
+    {
+      "symptom_name": "Weight Loss",
+      "duration": "3 months",
+      "severity": "Severe"
+    },
+    {
+      "symptom_name": "Shortness of Breath",
+      "duration": "2 months",
+      "severity": "Moderate"
+    },
+    {
+      "symptom_name": "Fatigue",
+      "duration": "5 months",
+      "severity": "Moderate"
+    }
+  ],
+  "genomic_variants": [
+    {
+      "gene": "EGFR",
+      "mutation": "L858R",
+      "variant_type": "SNV",
+      "pathogenicity": "Pathogenic",
+      "allele_frequency": 0.42
+    },
+    {
+      "gene": "TP53",
+      "mutation": "R273H",
+      "variant_type": "SNV",
+      "pathogenicity": "Likely Pathogenic",
+      "allele_frequency": 0.31
+    }
+  ],
+  "biomarkers": [
+    {
+      "biomarker_name": "PD-L1",
+      "value": "75%",
+      "interpretation": "High Expression"
+    },
+    {
+      "biomarker_name": "Tumor Mutational Burden",
+      "value": "12 Mut/Mb",
+      "interpretation": "Moderate"
+    }
+  ],
+  "lab_results": [
+    {
+      "test_name": "Hemoglobin",
+      "result": "12.4",
+      "reference_range": "13.5-17.5",
+      "abnormal_flag": true
+    },
+    {
+      "test_name": "White Blood Cell Count",
+      "result": "7.8",
+      "reference_range": "4.0-11.0",
+      "abnormal_flag": false
+    },
+    {
+      "test_name": "HbA1c",
+      "result": "7.1",
+      "reference_range": "<5.7",
+      "abnormal_flag": true
+    }
+  ],
+  "current_medications": [
+    {
+      "medication_name": "Metformin",
+      "dosage": "500 mg",
+      "frequency": "Twice Daily",
+      "indication": "Diabetes"
+    },
+    {
+      "medication_name": "Amlodipine",
+      "dosage": "5 mg",
+      "frequency": "Once Daily",
+      "indication": "Hypertension"
+    }
+  ],
+  "allergies": [
+    "Penicillin",
+    "Sulfa Drugs"
+  ],
+  "family_history": [
+    {
+      "relation": "Father",
+      "condition": "Lung Cancer"
+    },
+    {
+      "relation": "Mother",
+      "condition": "Breast Cancer"
+    }
+  ],
+  "lifestyle_factors": {
+    "smoking_status": "Former Smoker",
+    "alcohol_use": "Occasional",
+    "exercise_level": "Moderate",
+    "diet_type": "Balanced"
+  },
+  "clinical_notes": "Patient diagnosed with Stage IIIA EGFR-positive NSCLC. PET scan shows localized disease without distant metastasis. Candidate for targeted therapy. ECOG performance status is 1.",
+  "treatment_goals": [
+    "Targeted Therapy",
+    "Improve Progression-Free Survival",
+    "Reduce Tumor Burden",
+    "Maintain Quality of Life",
+    "Evaluate Clinical Trial Eligibility"
+  ],
+  "requested_analysis": [
+    "genomic_analysis",
+    "diagnostic_assessment",
+    "treatment_recommendation",
+    "clinical_trial_matching",
+    "research_summary"
+  ]
+}

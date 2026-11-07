@@ -1,19 +1,21 @@
 from datetime import datetime
 from typing import List
 
-from utils.logger import logger
+from app.config.settings import settings
+logger = settings.get_logger()
+
 
 from autogen_agentchat.teams import RoundRobinGroupChat
 from autogen_agentchat.messages import TextMessage
 
-from config.llm_config import get_model_client
 
-from agents.genomics_agent import create_genomics_agent
-from agents.diagnosis_agent import create_diagnosis_agent
-from agents.treatment_agent import create_treatment_agent
-from agents.research_agent import create_research_agent
 
-from models.response_model import (
+from app.agents.genomics_agent import create_genomics_agent
+from app.agents.diagnosis_agent import create_diagnosis_agent
+from app.agents.treatment_agent import create_treatment_agent
+from app.agents.research_agent import create_research_agent
+
+from app.schemas.response_model import (
     PrecisionMedicineResponse,
     GenomicFinding,
     BiomarkerInterpretation,
@@ -35,7 +37,7 @@ class PrecisionMedicineImplementation:
             "Initializing PrecisionMedicineImplementation"
         )
 
-        self.model_client = get_model_client()
+        self.model_client = settings.get_model_client()
 
     async def generate_precision_plan(
         self,

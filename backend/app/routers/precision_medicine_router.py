@@ -1,10 +1,12 @@
 from fastapi import APIRouter, HTTPException
-from utils.logger import logger
+from app.config.settings import settings
+logger = settings.get_logger()
+
 from datetime import datetime
 
-from models.request_model import PrecisionMedicineRequest
-from models.response_model import PrecisionMedicineResponse
-from services.precision_medicine_service import PrecisionMedicineService
+from app.schemas.request_model import PrecisionMedicineRequest
+from app.schemas.response_model import PrecisionMedicineResponse
+from app.services.precision_medicine_service import PrecisionMedicineService
 
 router = APIRouter()
 
